@@ -14,3 +14,14 @@ class Test
 
 // works
 $test = new Test(['name' => 'Doug Bierer', 'date' => new DateTime(), 'bal'  => 99.99]);
+var_dump($test);
+
+// doesn't work
+try {
+    $test = new Test(['name' => 'Doug Bierer', 'date' => '2020-06-06', 'bal'  => 99.99]);
+    var_dump($test);
+} catch (Throwable $t) {
+    echo get_class($t) . ':' . $t->getMessage();
+}
+
+
