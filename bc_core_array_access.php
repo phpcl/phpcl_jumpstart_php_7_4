@@ -5,6 +5,10 @@ $numBool  = TRUE;
 $strVal   = 'ABCDEF';
 
 try {
+    echo $strVal;
+    echo PHP_EOL;
+    echo $strVal[0];
+    echo PHP_EOL;
     echo $numFloat;
     echo PHP_EOL;
     echo $numFloat[0];

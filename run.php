@@ -9,7 +9,9 @@ if (file_exists($fullName)) {
     highlight_file($fullName);
     echo '<hr>';
     try {
+        echo '<pre>';
         include $fullName;
+        echo '</pre>';
     } catch (Throwable $t) {
         echo '<br>' . $t->getMessage();
     }
@@ -17,3 +19,4 @@ if (file_exists($fullName)) {
     header('Location: ' . BASE_DIR);
     exit;
 }
+echo PHP_EOL;
