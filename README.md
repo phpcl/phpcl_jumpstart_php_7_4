@@ -71,3 +71,16 @@ ln -s /srv/jumpstart/phpcl_jumpstart_php_7_4 /srv/www/phpcl_jumpstart_php_7_4
 ```
 http://localhost:8383/phpcl_jumpstart_php_7_4
 ```
+* Run examples side-by-side
+  * Install PHP on your host computer
+  * Clone the repository into your home directory (`/home/your_home`)
+```
+cd
+git clone https://github.com/phpcl/phpcl_jumpstart_php_7_4
+```
+  * Run the PHP built-in web server
+```
+cd phpcl_jumpstart_php_7_4
+php -S localhost:8888
+```
+  * Access from your browser: `http://localhost:8888/`

@@ -1,9 +1,13 @@
 <?php
+// Directions:
+// 1. Start the docker container running PHP 7.4
+// 2. Start the docker container running PHP 7.3
+// 3. In this directory run `php -S localhost:8888`
 $output = '';
 $list = glob(__DIR__ . '/*.php');
 foreach ($list as $file) {
     $name = basename($file);
-    $output .= '<br><a href="/phpcl_jumpstart_php_7_4/run.php?file=' . $name . '">' . $name . '</a>' . PHP_EOL;
+    $output .= '<br><a href="/run.php?file=' . $name . '">' . $name . '</a>' . PHP_EOL;
 }
 ?>
 <!DOCTYPE html>
