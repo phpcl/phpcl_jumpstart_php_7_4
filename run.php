@@ -8,7 +8,7 @@ $remote = (strpos($_SERVER['REQUEST_URI'], REPO) !== FALSE);
 $exec   = ($remote) ? 'execRemote' : 'execDock';
 $path   = ($remote) ? '/' . REPO . '/' : '/';
 
-function execDock($num, $runFile)
+function execDock($runFile, $num)
 {
     $cmdTh = 'docker exec -it jumpstart_php7' . $num . ' php --version';
     $cmdTd = 'docker exec -it jumpstart_php7' . $num . ' php /srv/jumpstart/phpcl_jumpstart_php_7_4/' . $runFile;
@@ -18,7 +18,7 @@ function execDock($num, $runFile)
 function execRemote($runFile)
 {
     $cmdTh = 'php --version';
-    $cmdTd = 'php ' . $runFile;
+    $cmdTd = 'php /srv/jumpstart/' . REPO . '/' . $runFile;
     return doExec($cmdTh, $cmdTd);
 }
 
@@ -47,8 +47,8 @@ if (file_exists($fullName)) {
     $output .= highlight_file($fullName, TRUE);
     $output .= '</td>' . PHP_EOL;
     // run script using PHP 7.4 and 7.3
-    $contents['php73'] = $exec(3, $runFile);
-    $contents['php74'] = $exec(4, $runFile);
+    $contents['php73'] = $exec($runFile, 3);
+    $contents['php74'] = $exec($runFile, 4);
     $output .= '<td style="width:50%;vertical-align:top;">' . PHP_EOL;
     $output .= '<table width="100%" height:"100%">' . PHP_EOL;
     $output .= '<tr>' . $contents['php73']['th'] . '</tr>' . PHP_EOL;
