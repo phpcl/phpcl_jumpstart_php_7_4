@@ -9,8 +9,7 @@ echo show('PASSWORD_BCRYPT', PASSWORD_BCRYPT);
 
 // works OK
 $password = 'password';
-echo show('Using Constant', password_hash($password, PASSWORD_DEFAULT));
-echo PHP_EOL;
+echo show('Using Constant', password_hash($password, PASSWORD_BCRYPT));
 
 // doesn't work in PHP 7.4
 echo show('Hard-Coded', password_hash($password, 1));
