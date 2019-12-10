@@ -1,9 +1,6 @@
 <?php
-class Test extends ArrayObject
-{
-    public $alpha = ['A','B','C'];
-    public $num   = 12345;
-}
-$obj = new Test();
+$obj = new ArrayObject();
+$obj['alpha'] = ['A','B','C'];
+$obj['num']   = 12345;
 $vars = new ReflectionObject($obj);
 var_dump($vars->getProperties());
