@@ -1,0 +1,9 @@
+<p>This <i>contains</i> a <script>alert('Non Supported');</script>
+character set.</p>
+<p>Only <b>basic</b> encoding is supported, so statements like this:</p>
+<pre><?php echo "Is this encoded?"; ?></pre>
+<p>Might not be coded as you think.</p>
+<p>C'est ainsi que vous dites "c'est ainsi que vous dites" dans une
+autre langue.</p>
+<p>Så här säger du "så säger du" på ett annat språk.</p>
+
