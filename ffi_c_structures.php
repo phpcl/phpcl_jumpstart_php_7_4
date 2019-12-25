@@ -19,3 +19,4 @@ echo "\nBad Alignment:\t" . FFI::alignof($bad);
 echo "\nBad Size:\t" . FFI::sizeof($bad);
 echo "\nGood Alignment:\t" . FFI::alignof($good);
 echo "\nGood Size:\t" . FFI::sizeof($good);
+echo "\n";
