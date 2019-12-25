@@ -1,12 +1,30 @@
 <?php
 set_include_path(__DIR__ . PATH_SEPARATOR . get_include_path());
-echo get_include_path();
 $ffi = FFI::cdef(
     "void bubble_sort(long [], long);",
-    "bubble_sort.o");
-$array = FFI::new("long[1024]");
+    "./libbubble.so");
+$max   = 16;
+$array = FFI::new('long[' . $max . ']');
+// output function
+function show($array)
+{
+    $count = 3;
+    $output = '| ';
+    for ($i = 0; $i < count($array); $i++) {
+        $output .= sprintf("%02d : %4d | \t", $i, $array[$i]);
+        if ($count-- === 0) {
+            $count = 3;
+            $output .= PHP_EOL . '| ';
+        }
+    }
+    return substr($output,0,-2) . PHP_EOL;
+}
 // create array with random numbers
-for ($i = 0; $i < 10; $i++) $array[$i] = rand(0,9999);
+for ($i = 0; $i < $max; $i++) $array[$i] = rand(0,9999);
 // display current state
-for ($i = 0; $i < count($array); $i++) echo $array[$i] . ',';
-
+echo "\nCurrent State:\n";
+echo show($array);
+echo "\nAfter Sort:\n";
+$ffi->bubble_sort($array, $max);
+echo show($array);
+echo PHP_EOL;
