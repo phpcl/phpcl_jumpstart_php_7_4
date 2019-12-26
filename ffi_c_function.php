@@ -1,5 +1,4 @@
 <?php
-set_include_path(__DIR__ . PATH_SEPARATOR . get_include_path());
 $ffi = FFI::cdef(
     "void bubble_sort(long [], long);",
     "./libbubble.so");
