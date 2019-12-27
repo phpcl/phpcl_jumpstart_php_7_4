@@ -1,4 +1,13 @@
-[PHP]
+; OPCache settings
+zend_extension=/usr/lib/php/extensions/no-debug-non-zts-20190902/opcache.so
+opcache.enable=1 	 
+opcache.enable_cli=1
+;opcache.preload=/srv/jumpstart/phpcl_jumpstart_php_7_4/preload.php
+;opcache.preload_user=test
+; FFI preload demo
+ffi.enable=preload
+ffi.preload=/srv/jumpstart/phpcl_jumpstart_php_7_4/ffi_preload.php
+; other settings
 engine = On
 short_open_tag = Off
 precision = 14
@@ -97,7 +106,3 @@ session.save_path = "tcp://127.0.0.1:6379"
 extension=amqp.so
 extension=memcached.so
 zend_extension=/usr/lib/php/extensions/no-debug-non-zts-20190902/xdebug.so
-; FFI preload demo
-ffi.enable=preload
-opcache.preload=/srv/jumpstart/phpcl_jumpstart_php_7_4/preload.php
-
