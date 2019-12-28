@@ -2,7 +2,7 @@
 zend_extension=/usr/lib/php/extensions/no-debug-non-zts-20190902/opcache.so
 opcache.enable=1 	 
 opcache.enable_cli=1
-opcache.preload=/srv/jumpstart/phpcl_jumpstart_php_7_4/opcache_preload.php
+opcache.preload=/srv/jumpstart/phpcl_jumpstart_php_7_4/preload_opcache.php
 opcache.preload_user=test
 ; other settings
 engine = On

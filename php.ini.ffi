@@ -6,7 +6,7 @@ opcache.enable_cli=1
 ;opcache.preload_user=test
 ; FFI preload demo
 ffi.enable=preload
-ffi.preload=/srv/jumpstart/phpcl_jumpstart_php_7_4/ffi_preload.php
+ffi.preload=/srv/jumpstart/phpcl_jumpstart_php_7_4/preload_ffi.php
 ; other settings
 engine = On
 short_open_tag = Off
