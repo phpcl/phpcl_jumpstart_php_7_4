@@ -14,11 +14,16 @@ echo ThisIsOk::FN . PHP_EOL;
 echo $ok->fn();
 
 try {
+    // can't use "FN" as a constant in PHP 7.4
+    define('FN', 'filename.txt');
+    echo FN . ' does not work in PHP 7.4';
+    // can't use "fn" as a function name in PHP 7.4
     function fn() { 
         $output = __FUNCTION__ . ': does not work in PHP 7.4';
         return $output . PHP_EOL;
     }
     echo fn() . PHP_EOL;
+    // classname `Fn` does not work
     class Fn 
     {
         public function fn()

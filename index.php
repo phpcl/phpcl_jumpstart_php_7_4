@@ -2,7 +2,7 @@
 // Directions:
 // 1. Start the docker container running PHP 7.4
 // 2. Start the docker container running PHP 7.3
-// 3. In this directory run `php -S localhost:8888`
+// 3. In this directory on your host computer run `php -S localhost:8888`
 define('REPO', 'phpcl_jumpstart_php_7_4');
 $remote = (strpos($_SERVER['REQUEST_URI'], REPO) !== FALSE);
 $exec   = ($remote) ? 'execRemote' : 'execDock';
@@ -20,6 +20,7 @@ foreach ($list as $file) {
     <title>PHP-CL JumpStart:PHP 7.4</title>
 </head>
 <body>
+    <h1>PHP-CL JumpStart:PHP 7.4</h1>
     <table>
         <tr>
             <td><?= $output; ?></td>
