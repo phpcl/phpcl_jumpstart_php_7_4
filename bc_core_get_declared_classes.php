@@ -7,4 +7,6 @@ class Test
     }
 }
 $declared = get_declared_classes();
-echo implode(' : ', $declared) . "\n";
+echo wordwrap(implode(' : ', $declared), 120) . "\n";
+
+
