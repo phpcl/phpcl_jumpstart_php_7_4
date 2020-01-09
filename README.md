@@ -32,6 +32,10 @@ docker exec -it jumpstart_php74 /bin/bash
 cd /srv/jumpstart
 git clone https://github.com/phpcl/phpcl_jumpstart_php_7_4
 ```
+* Change `php.ini` settings for maximum error reporting
+```
+cp /srv/jumpstart/phpcl/phpcl_jumpstart_php_7_4/php.ini.74 /etc/php.ini
+```
 * Connect repo to container web server
 ```
 ln -s /srv/jumpstart/phpcl_jumpstart_php_7_4 /srv/www/phpcl_jumpstart_php_7_4
@@ -62,6 +66,10 @@ docker exec -it jumpstart_php73 /bin/bash
 ```
 cd /srv/jumpstart
 git clone https://github.com/phpcl/phpcl_jumpstart_php_7_4
+```
+* Change `php.ini` settings for maximum error reporting
+```
+cp /srv/jumpstart/phpcl/phpcl_jumpstart_php_7_4/php.ini.73 /etc/php.ini
 ```
 * Connect repo to container web server
 ```
