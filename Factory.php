@@ -1,4 +1,4 @@
 <?php
 interface Factory {
-    public function make(): object;
+    public function make(array $arr): ArrayObject;
 }

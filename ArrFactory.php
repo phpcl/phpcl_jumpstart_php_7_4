@@ -1,9 +1,9 @@
 <?php
 class ArrFactory implements Factory {
     protected array $data;
-    public function make($data): ArrayObject
+    public function make(array $data): ArrTest 
     {
         $this->data = $data;
-        return new ArrayObject($this->data);
+        return new ArrTest($this->data);
     }
 }
