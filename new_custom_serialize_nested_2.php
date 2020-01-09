@@ -24,6 +24,7 @@ class B extends A {
 $b = new B();
 var_dump($b);
 $str = serialize($b);
+echo $str . "\n";
 $b2  = unserialize($str);
 var_dump($b2);
 

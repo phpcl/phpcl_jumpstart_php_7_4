@@ -19,8 +19,9 @@ class B extends A {
         $this->prop = $prop;
     }
 }
-$b = new B();
-var_dump($b);
-$str = serialize($b);
+$b1 = new B();
+var_dump($b1);
+$str = serialize($b1);
+echo $str . "\n";
 $b2  = unserialize($str);
 var_dump($b2);
