@@ -5,7 +5,7 @@ class Test extends ArrayObject
     public $name = 'Cal Evans';
     public function getVars()
     {
-        return array_combine(
+        return array_merge(
             get_object_vars($this),
             $this->getArrayCopy()
         );
