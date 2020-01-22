@@ -16,5 +16,5 @@ while ($item = $it->current()) {
     echo $item . ' ';
     $it->next();
 }
-
+echo "\n";
 
