@@ -1,0 +1,27 @@
+version: "3"
+services:
+  jumpstart_php73:
+    container_name: jumpstart_php73
+    hostname: php73
+    image: asclinux/linuxforphp-8.2-ultimate:7.3-nts
+    volumes:
+     - jumpstart_php73:/srv/jumpstart
+    ports:
+     - 8383:80
+    build: ./jumpstart_php73
+    restart: always
+
+  jumpstart_php74:
+    container_name: jumpstart_php74
+    hostname: php74
+    image: asclinux/linuxforphp-8.2-ultimate:7.4-nts
+    volumes:
+     - jumpstart_php74:/srv/jumpstart
+    ports:
+     - 8484:80
+    build: ./jumpstart_php74
+    restart: always
+
+volumes:
+  jumpstart_php73: {}
+  jumpstart_php74: {}

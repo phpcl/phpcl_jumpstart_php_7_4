@@ -9,7 +9,7 @@ docker run -dit --name jumpstart_php74 -v ${PWD}/:/srv/www -p 8484:80 -p 10444:4
 # Restore files from repo for course
 docker exec jumpstart_php74 /bin/bash -c "git clone https://github.com/phpcl/phpcl_jumpstart_php_7_4 /srv/jumpstart/phpcl_jumpstart_php_7_4"
 # Change `php.ini` settings for maximum error reporting
-docker exec jumpstart_php74 /bin/bash -c "cp /srv/jumpstart/phpcl/phpcl_jumpstart_php_7_4/php.ini.74 /etc/php.ini"
+docker exec jumpstart_php74 /bin/bash -c "cp /srv/jumpstart/phpcl_jumpstart_php_7_4/php.ini.74 /etc/php.ini"
 # Connect repo to container web server
 docker exec jumpstart_php74 /bin/bash -c "ln -s /srv/jumpstart/phpcl_jumpstart_php_7_4 /srv/www/phpcl_jumpstart_php_7_4"
 # Set up a container for PHP 7.3
@@ -20,7 +20,7 @@ docker run -dit --name jumpstart_php73 -v ${PWD}/:/srv/www -p 8383:80 -p 10433:4
 # From a terminal window/command line prompt open a shell to PHP 7.3:
 docker exec jumpstart_php73 /bin/bash -c "git clone https://github.com/phpcl/phpcl_jumpstart_php_7_4 /srv/jumpstart/phpcl_jumpstart_php_7_4"
 # Change `php.ini` settings for maximum error reporting
-docker exec jumpstart_php73 /bin/bash -c "cp /srv/jumpstart/phpcl/phpcl_jumpstart_php_7_4/php.ini.73 /etc/php.ini"
+docker exec jumpstart_php73 /bin/bash -c "cp /srv/jumpstart/phpcl_jumpstart_php_7_4/php.ini.73 /etc/php.ini"
 # Connect repo to container web server
 docker exec jumpstart_php73 /bin/bash -c "ln -s /srv/jumpstart/phpcl_jumpstart_php_7_4 /srv/www/phpcl_jumpstart_php_7_4"
 # Run examples side-by-side
